@@ -13,7 +13,6 @@ import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
 
-
 public class WorldSaverUI {
     private JFrame frame;
     private JPanel leftPanel, rightPanel, bottomPanel;

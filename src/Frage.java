@@ -13,7 +13,7 @@ public class Frage {
 		this.b2 = false;
 		this.b3 = false;
 	}
-	
+
 	public String[] getAntworten() {
 	    String[] antworten = {a1, a2, a3};
 	    return antworten;
