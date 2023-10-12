@@ -20,14 +20,6 @@ public class WorldSaverUI {
     private JProgressBar progressBar;
     private JPanel boxPanel1, boxPanel2, boxPanel3, boxPanel4;
     private JButton weiterButton;
-    
-    JPanel panel = new JPanel();
-
-    JRadioButton radioButtonA = new JRadioButton("Antwort A");
-    JRadioButton radioButtonB = new JRadioButton("Antwort B");
-    JRadioButton radioButtonC = new JRadioButton("Antwort C");
-
-    ButtonGroup group = new ButtonGroup();
 
     private JLabel[] checkMarks;
     private boolean[] levelDone;
@@ -80,16 +72,6 @@ public class WorldSaverUI {
         rightPanel.add(boxPanel2);
         rightPanel.add(boxPanel3);
         rightPanel.add(boxPanel4);
-        
-        //Buttons der Gruppen zugeordnet
-        panel.setBorder(BorderFactory.createTitledBorder(boxText));
-        group.add(radioButtonA);
-        group.add(radioButtonB);
-        group.add(radioButtonC);
-
-        panel.add(radioButtonA);
-        panel.add(radioButtonB);
-        panel.add(radioButtonC);
 
         // Erzeugung der unteren Leiste mit Fortschrittsanzeige
         bottomPanel = new JPanel();
@@ -138,6 +120,21 @@ public class WorldSaverUI {
     }
 
     private JPanel createBoxPanel(String boxText) {
+        JPanel panel = new JPanel();
+        panel.setBorder(BorderFactory.createTitledBorder(boxText));
+
+        JRadioButton radioButtonA = new JRadioButton("Antwort A");
+        JRadioButton radioButtonB = new JRadioButton("Antwort B");
+        JRadioButton radioButtonC = new JRadioButton("Antwort C");
+
+        ButtonGroup group = new ButtonGroup();
+        group.add(radioButtonA);
+        group.add(radioButtonB);
+        group.add(radioButtonC);
+
+        panel.add(radioButtonA);
+        panel.add(radioButtonB);
+        panel.add(radioButtonC);
 
         // Füge einen ActionListener zu den Radiobuttons hinzu, um das Level zu überprüfen
         ActionListener radioListener = new ActionListener() {
@@ -164,9 +161,8 @@ public class WorldSaverUI {
     }
 
     private boolean isLevelCompleted() {
-    	if() {
-    		
-    	}
+    	//if() {	
+    	//}
         // Hier die Logik zur Überprüfung, ob das Level bestanden wurde, einfügen
         // Zum Beispiel, wenn alle Radiobuttons ausgewählt wurden, return true;
         // Andernfalls, return false;
